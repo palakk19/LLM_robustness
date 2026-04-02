@@ -1,6 +1,39 @@
+# environments
+.venv/
 venv/
-dataset/
+
+# python cache
 __pycache__/
-.DS_Store
+*.pyc
+
+# outputs
+palak_final2/
+logs/
+old_results/
+old_scripts/
+data_exploration/
+newfinal.py
+results/llama/robustness_analysis_csv/
+results/qwen/robustness_analysis_csv/
+results/medgemma/robustness_analysis_csv/
+
+results/llama/run_checkpoint.json
+results/qwen/run_checkpoint.json
+results/medgemma/run_checkpoint.json
+
+# local dataset
 dataset/
-venv/
+*.gz
+*.csv
+*.json
+*.html
+*.png
+
+# notebook/checkpoint junk
+.ipynb_checkpoints/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

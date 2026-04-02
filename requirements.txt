@@ -11,5 +11,16 @@ tqdm
 scipy
 spacy
 scispacy
-# Install the spaCy model separately:
-# pip install https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.5.4/en_core_sci_sm-0.5.4.tar.gz
+# ============================
+# REQUIRED SCISPACY MODELS
+# ============================
+# Install manually after pip install -r requirements.txt
+
+# Core Sci model (medium)
+# pip install https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.6.2/en_core_sci_md-0.6.2.tar.gz
+
+# Core Sci model (large)
+# pip install https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.6.2/en_core_sci_lg-0.6.2.tar.gz
+
+# BC5CDR NER model (DISEASE + CHEMICAL)
+# pip install https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.6.2/en_ner_bc5cdr_md-0.6.2.tar.gz
