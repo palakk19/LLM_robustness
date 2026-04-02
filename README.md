@@ -29,8 +29,16 @@ data/stratified_dataset.csv
 - `src/plotting.py` — visualization and plot generation  
 - `src/reporting.py` — HTML report generation  
 - `run_experiment.py` — main experiment runner  
+- `requirements.txt` — list of required Python dependencies  
 
 ---
+
+## ⚙️ Setup
+
+Install all dependencies using:
+
+```bash
+pip install -r requirements.txt
 
 ## ⚙️ Methodology Overview
 
