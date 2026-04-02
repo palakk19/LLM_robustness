@@ -47,7 +47,7 @@ def classify_stability(df):
         n_same  = int(same_mask.sum())
         n_drift = int((~same_mask).sum())
 
-        # --- NEW LOGIC: Check how many UNIQUE wrong codes were predicted ---
+        # --- Check how many UNIQUE wrong codes were predicted ---
         drifted_preds = valid_rows.loc[~same_mask, 'perturbed_icd_pred']
         unique_wrong_preds = drifted_preds.nunique() if n_drift > 0 else 0
 

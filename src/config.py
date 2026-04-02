@@ -4,7 +4,7 @@ import warnings
 # CONFIGURATION
 # ============================================================
 ORACLE_MODEL   = "llama3.1:8b"             # The Judge/Attacker (Generates & Validates)
-TARGET_MODEL   = "qwen2.5:7b"
+TARGET_MODEL   = "qwen2.5:7b"              # Goes through levels of attack and is evaluated
 
 API_URL        = "http://ollama.warhol.informatik.rwth-aachen.de/api/generate"
 NOTES_PATH     = r"C:/Users/palak/rfc/dataset/physionet.org/files/mimic-iv-note/2.2/note/discharge.csv.gz"

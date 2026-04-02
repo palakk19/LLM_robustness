@@ -306,14 +306,7 @@ class StructuredMedicalPerturber:
                 print(f"       LAYER2 BLOCKED ({reason}): '{original}'->'{candidate}'")
                 continue
 
-            # # FIX: scorer is now actually used (was passed as None before)
-            # if scorer is not None and sim_threshold > 0:
-            #     pair_sim = scorer._bert_cosine(original, candidate)
-            #     if pair_sim < sim_threshold:
-            #         print(f"       LAYER2.5 BLOCKED (sim={pair_sim:.3f}): "
-            #               f"'{original}'->'{candidate}'")
-            #         continue
-
+            
             if apply_safety_gate:
                 llm_ok, _ = validate_replacement_with_llm(
                     original, candidate, ent['context'])
@@ -372,13 +365,13 @@ class StructuredMedicalPerturber:
             key=lambda x: (x['start_char'], x['end_char'], x['text'].lower())
         )
 
-        # FIX: cap at MAX_CHANGES to prevent overly aggressive perturbation
+        
         n_target     = max(1, int(len(all_entities) * perturbation_rate))
         # n_target     = min(n_target, MAX_CHANGES)
         target_ents  = random.sample(all_entities, min(n_target, len(all_entities)))
         synonym_map  = find_synonyms_batch(target_ents, attack_level=attack_level)
 
-        # FIX: pass scorer through so Layer 2.5 actually runs
+        
         return self.validate_and_apply(text, target_ents, synonym_map,
                                        attack_level=attack_level,
                                        scorer=None)

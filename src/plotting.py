@@ -169,9 +169,7 @@ def plot_drift_destination(valid_df, chapters_of_interest, plot_file, level_labe
             print(f"  Saved: {dest_path}")
 
 
-# ============================================================
-# SECTION 8c: PLOTS
-# ============================================================
+
 def plot_results(df):
     debug_print("PLOT", "Generating plots...")
 
